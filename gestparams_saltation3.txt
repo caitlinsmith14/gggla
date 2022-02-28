@@ -1,0 +1,5 @@
+Pattern_Name: saltation3
+Symbol	Constriction_Degree	Strength
+i	4	100
+e	10	1000
+a	16	1

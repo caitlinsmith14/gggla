@@ -1,0 +1,10 @@
+Pattern_Name: hightrigger_noblock3
+Name	Initial_Weight	Teacher_Weight	Definition
+Persist(height)	0	1	lambda x: 0 if x.split('_')[0][-1] == '+' else -1
+SelfDeactivate	0	2	lambda x: -1 if x.split('_')[0][-1] == '+' else 0
+*Gest(TBhigh,SelfDeact)	0	2	lambda x: -1 if x.split('_')[0] == 'i' else 0
+*Inhibit	0	3	lambda x: -1 if x.split('_')[-1][-1] == 'x' else 0
+Inhibit(TBheight,TBheight)	0	1	lambda x: 0 if x.split('_')[-1][-1] == 'x' else -1
+Inhibit(TBhigh,TBmid)	0	1	lambda x: -1 if any(y in x.split('_') for y in ['i', 'i+']) and any(y in x.split('_') for y in ['e', 'e+']) and x.split('_')[-1][-1] != 'x' else 0
+Inhibit(TBhigh,TBlow)	0	1	lambda x: -1 if any(y in x.split('_') for y in ['i', 'i+']) and any(y in x.split('_') for y in ['a', 'a+']) and x.split('_')[-1][-1] != 'x' else 0
+Inhibit(TBmid,TBlow)	0	1	lambda x: -1 if any(y in x.split('_') for y in ['e', 'e+']) and any(y in x.split('_') for y in ['a', 'a+']) and x.split('_')[-1][-1] != 'x' else 0

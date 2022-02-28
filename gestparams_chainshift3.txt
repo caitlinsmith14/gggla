@@ -1,0 +1,5 @@
+Pattern_Name: chainshift3
+Symbol	Constriction_Degree	Strength
+i	4	100
+e	10	1
+a	16	100
