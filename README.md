@@ -10,9 +10,10 @@ The code we use for computational modeling of the learning of height harmony can
 
 **Create new agents from a harmony pattern file.** A pattern file should be a .txt file specifying a vowel inventory. Several sample .txt files are included in the repository. Use the `Agent` class to initialize new agent objects, both learners and teachers.
 
-`>>> learner = Agent(grammar_con_path='./con_hightrigger_noblock3.txt', gest_param_path='./gestparams_chainshift3.txt')`
-`>>> teacher = Agent(grammar_con_path='./con_hightrigger_noblock3.txt', gest_param_path='./gestparams_chainshift3.txt', progen=True)`
-
+```
+>>> learner = Agent(grammar_con_path='./con_hightrigger_noblock3.txt', gest_param_path='./gestparams_chainshift3.txt')
+>>> teacher = Agent(grammar_con_path='./con_hightrigger_noblock3.txt', gest_param_path='./gestparams_chainshift3.txt', progen=True)
+```
 **Train the learner agent.** Once the agent is initialized, train the height gestures of its vowels using the `train()` method. This can take anywhere from a few seconds to a minute.
 
 `>>> learner.train(teacher_agent=teacher, con_lr=0.1, gest_lr=0.1, window=0.2)`
