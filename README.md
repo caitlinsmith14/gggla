@@ -1,6 +1,10 @@
 ## The Grammar + Gesture Gradual Learning Algorithm
 
-This project introduces the Grammar + Gesture Gradual Learning Algorithm (GGGLA), an error-driven online learning algorithm, and applies it to the task of learning derivationally opaque height harmony patterns. The code we use for computational modeling of the learning of height harmony can be found in `gggla.py` above. Here, we will walk you through how to use this code.
+This project introduces the Grammar + Gesture Gradual Learning Algorithm (GGGLA), an error-driven online learning algorithm, and applies it to the task of learning derivationally opaque height harmony patterns. The algorithm is introduced in the following talk:
+
+Smith, Caitlin (2022) Grammar and Representation Learning for Opaque Harmony Processes (joint work with [Charlie O'Hara](https://charlieohara.github.io/)). Invited talk presented at the Society for Computation in Linguistics, Online, February 2022.
+
+The code we use for computational modeling of the learning of height harmony can be found in `gggla.py` above. Here, we will walk you through how to use this code.
 
 **Check python version and install dependencies.** The code for the GGGLA learner is written for use with python 3.8. It is likely compatible with some older versions of python 3, but we make no guarantees. The code uses several packages that are not included in the python standard library and must be installed by the user. These are: `matplotlib` (pip install), `numpy` (conda/pip install), and `tqdm` (pip install).
 
